@@ -1,17 +1,19 @@
 <template>
-  <img :src="country.flag" :alt="country.name" />
-  <div class="country-details">
-    <h3>{{ country.name }}</h3>
-    <p><span>Population:</span> {{ country.population }}</p>
-    <p><span>Region:</span> {{ country.region }}</p>
-    <p><span>Capital:</span> {{ country.capital }}</p>
-  </div>
+  <router-link :to="{ name: 'Details', params: { id: id } }">
+    <img :src="country.flag" :alt="country.name" />
+    <div class="country-details">
+      <h3>{{ country.name }}</h3>
+      <p><span>Population:</span> {{ country.population }}</p>
+      <p><span>Region:</span> {{ country.region }}</p>
+      <p><span>Capital:</span> {{ country.capital }}</p>
+    </div>
+  </router-link>
 </template>
 
 <script>
 export default {
   name: 'Country',
-  props: ['country'],
+  props: ['country', 'id'],
 }
 </script>
 

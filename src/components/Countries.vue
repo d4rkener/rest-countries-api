@@ -1,7 +1,7 @@
 <template>
   <div class="countries">
     <div class="country" v-for="country in countries" :key="country.area">
-      <Country :country="country" />
+      <Country :country="country" :id="country.alpha3Code" />
     </div>
   </div>
 </template>
