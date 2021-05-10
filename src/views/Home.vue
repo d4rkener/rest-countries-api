@@ -3,13 +3,16 @@
     <form>
       <input type="text" placeholder="Search for a country..." />
     </form>
+    <Countries />
   </div>
 </template>
 
 <script>
+import Countries from '../components/Countries'
+
 export default {
   name: 'Home',
-  components: {},
+  components: { Countries },
 }
 </script>
 
@@ -34,6 +37,7 @@ form {
       var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     border-radius: 5px;
     max-width: 600px;
+    margin-bottom: 1.8rem;
 
     &:active {
       outline: none;
